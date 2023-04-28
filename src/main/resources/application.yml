@@ -1,4 +1,9 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000
   cloud:
     gateway:
       routes:
@@ -18,7 +23,7 @@ spring:
             - Path=/api/v3/*
 
 
-# enable the below for trouble shooting
+# enable the below for troubleshooting
 # the wiretaps and logging levels enable over the wire debugging
 #      httpserver:
 #        wiretap: true
